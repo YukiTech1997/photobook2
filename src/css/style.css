@@ -1,0 +1,169 @@
+@charset "utf-8";
+@import "destyle.css";
+
+/*
+common
+*/
+body {
+  font-size: 14px;
+  font-family: "Hiragino Kaku Gothic ProN", Arial, sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*
+components
+*/
+.container_lv1 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.container_lv2 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.sec_title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.sec_wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.sec_bg_gray {
+  background-color: #F5F5F5;
+  padding: 60px;
+  margin-top: 60px;
+}
+
+/*
+header
+*/
+#header {
+  margin: 60px auto 15px;
+}
+.header_logo_link {
+  display: block;
+  width: 180px;
+}
+
+/*
+index
+*/
+#index {
+  text-align: center;
+}
+#index > .sec_wrapper {
+  border: 1px solid #333;
+  padding: 30px 0;
+  margin-top: 30px;
+}
+.index_list {
+  display: inline-block;
+  list-style: decimal;
+}
+.index_list li + li {
+  margin-top: 20px;
+}
+
+/*
+gallery
+*/
+#gallery {
+  margin-top: 60px;
+}
+.gallery_area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+}
+
+/*
+detail
+*/
+#detail > .sec_title {
+  text-align: center;
+}
+#detail > .sec_wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.detail_desc_list {
+  width: 167px;
+  margin-right: 71px;
+}
+.desc_list_term {
+  margin-top: 10px;
+}
+.desc_list_term:first-child {
+  margin-top: 0;
+}
+.detail_contents {
+  padding-left: 40px;
+  border-left: 1px solid #333;
+}
+.detail_text {
+  width: 402px;
+  margin-bottom: 20px;
+}
+.detail_cta {
+  text-decoration: underline;
+}
+.detail_cta:hover {
+  opacity: 0.8;
+}
+
+/*
+footer
+*/
+#footer {
+  margin: 75px 0 15px;
+  text-align: center;
+}
+.copy_right {
+  font-size: 10px;
+}
+
+/*
+mediaQuery
+*/
+@media (max-width: 1024px) {
+  .sec_bg_gray {
+    padding: 40px 20px;
+  }
+  #header {
+    padding: 0 10px;
+  }
+  #main {
+    padding: 0 20px;
+  }
+  .index_list {
+    padding: 0 12px;
+    list-style-position: inside;
+  }
+  .gallery_area {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  #detail > .sec_wrapper {
+    flex-direction: column;
+  }
+  .detail_desc_list {
+    width: 100%;
+    margin: 0 0 40px;
+  }
+  .detail_contents {
+    padding: 40px 0 0;
+    border-top: 1px solid #333;
+    border-left: none;
+  }
+  .detail_text {
+    width: 100%;
+  }
+}
